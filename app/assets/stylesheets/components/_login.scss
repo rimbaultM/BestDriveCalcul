@@ -1,0 +1,41 @@
+.container-login{
+  margin:0 auto;
+  width: 350px;
+  height: 500px;
+}
+.logo-login{
+
+  display: block;
+  margin:25vh auto 5vh auto;
+}
+.input-login{
+  color: white;
+  color:black;
+}
+.login-btn{
+  background-color: white;
+  color: #fbaa06;
+  padding: 8px 30px;
+  border-radius: 5px;
+  border:1px solid #fbaa06;
+  display:block;
+  margin:0 auto;
+  transition: 0.3s ease-in 0s;
+  &:hover{
+    background-color: #fbaa06;
+    border:1px solid white;
+    color: white;
+  }
+}
+.login-center{
+  text-align:center;
+  margin-top: 20px;
+}
+.fondcolor{
+  // background-image: linear-gradient(to right bottom, #5e6366, #4d5257, #3f4149, #333039, #282029);
+  background-color: white;
+  height: 100vh;
+  width: 100vw;
+  box-shadow:0px 0px 8px 0px #191a1a inset;
+  position: fixed;
+}

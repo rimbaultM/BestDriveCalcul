@@ -1,2 +1,42 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="accueil">
+ <div class="container">
+    <div class="row">
+      <div class="col-md-6 ">
+        <div class="roue">
+            <ul class="roue-liste">
+              <li>
+                  <%= link_to standards_path do %>
+                    <%= image_tag "https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602678239/roue_standard_gzlfx7.png" %>
+                  <% end %>
+              </li>
+              <li>
+                <h5 class="titre">Roue Standard</h5>
+              </li>
+            </ul>
+        </div>
+      </div>
+      <div class="col-md-6 ">
+        <div class="roue">
+            <ul class="roue-liste">
+              <li>
+                <%= link_to etroites_path do %>
+                    <%= image_tag "https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602678239/roue_etroite_j0jceb.png" %>
+                  <% end %>
+              </li>
+              <li>
+                <h5 class="titre">Roue Etroite</h5>
+              </li>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= link_to destroy_user_session_path, method: :delete  do%>
+  <img src="https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602678647/logoopacity_grmfql.png" id="logo">
+<% end %>
+
+
+
+
