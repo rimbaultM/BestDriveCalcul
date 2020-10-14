@@ -78,8 +78,8 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+# config/database.yml
+# [...]
 production:
   <<: *default
-  database: BestDriveCalcul_production
-  username: BestDriveCalcul
-  password: <%= ENV['BESTDRIVECALCUL_DATABASE_PASSWORD'] %>
+  url: <%= ENV['POSTGRESQL_ADDON_URI'] %>
