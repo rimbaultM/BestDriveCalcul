@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :standards, only: [:index, :new, :create]
   resources :etroites, only: :index
+  resources :answer, only: :index
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

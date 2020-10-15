@@ -1,3 +1,44 @@
-<h2>coucou l'étroite
-</h2>
+
+<div class="container container-mobile">
+  <div class="logo-fat">
+    <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602678647/logoopacity_grmfql.png") %>
+  </div>
+  <div class="back">
+
+  </div>
+  <div class="formulaire">
+    <div class="formulaire-title">
+      <h3>Données d'entrées : roue étroite</h3>
+    </div>
+
+    <div class="formulaire-content">
+      <div class="row">
+        <div class="col-lg-6 col-12 ">
+            <%= simple_form_for(@etroite) do |f| %>
+              <%= f.input :jantelargeur,placeholder:"pouces", label:"JANTES : Largueur" %>
+              <%= f.input :janteexterieur,placeholder:"mm", label:"JANTES : Coté exterieur" %>
+              <%= f.input :jantesepaisseur,placeholder:"mm", label:"JANTES : Epaisseur couronne" %>
+              <%= f.input :voilecreux,placeholder:"mm", label:"VOILE : Creux de voile" %>
+              <%= f.input :voileepaisseur,placeholder:"mm", label:"VOILE : Epaisseur" %>
+              <%= f.input :fam,placeholder:"mm", label:"F.A.M. : Coté exterieur" %>
+              <%= f.input :cic,placeholder:"mm", label:"Centre Inter Changeable: Epaisseur" %>
+              <div class="form-actions">
+                <%= f.button :submit, "Calcul des voies possibles", class: "btn btn-flat formulaire-submit" %>
+              </div>
+            <% end %>
+        </div>
+        <div class="col-lg-6 col-12 ">
+          <div class="montage-standard" id="montage-1" style="background-image:  url(<%= image_path("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602751416/largeur_kazrvk.jpg") %>)"></div>
+          <div class="montage-standard" id="montage-2" style="background-image:  url(<%= image_path("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602754694/exterieur1_ihs10y.jpg") %>)"></div>
+          <div class="montage-standard" id="montage-3" style="background-image:  url(<%= image_path("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602755043/couronne1_k1qkzp.jpg") %>)"></div>
+          <div class="montage-standard-bis" id="montage-4" style="background-image:  url(<%= image_path("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602755095/exterieur2_kwhiaz.jpg") %>)"></div>
+          <div class="montage-standard-bis" id="montage-5" style="background-image:  url(<%= image_path("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602755153/epaisseur1_kbou3l.jpg") %>)"></div>
+          <div class="montage-standard" id="montage-6" style="background-image:  url(<%= image_path("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602755154/exterieur3_vzdi1z.jpg") %>)"></div>
+          <div class="montage-standard-bis" id="montage-7" style="background-image:  url(<%= image_path("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602757716/epaisseur2_htfufg.jpg") %>)"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
 

@@ -1,0 +1,59 @@
+.choices{
+  width: 90%;
+}
+.choices li{
+  display: inline-block;
+  width: 20%;
+  text-align: center;
+  border: 1px solid #fbaa06;
+  border-radius: 5px;
+  padding: 10px 0;
+  font-weight: bold;
+}
+.choices li:hover{
+
+  border: 3px solid #fbaa06;
+  color:#fbaa06;
+  background: rgba(210,210,210,0.5);
+  text-decoration: none;
+}
+.choices ul{
+  margin-top: 30px;
+  margin-left: 25%;
+  padding: 0;
+}
+.draw{
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  top:18%;
+  text-align:center;
+}
+.draw-1, .draw-2,.draw-3, .draw-4, .draw-5, .draw-6, .draw-7, .draw-8 {
+  max-width: 75%;
+  padding: 40px 50px;
+  background-color: white;
+  margin: 0 auto;
+  position: relative;
+  border: 2px solid #fcd481;
+  display:none;
+  border-radius: 5px;
+}
+.draw img{
+  max-width: 100%;
+  width: 65%;
+}
+.close{
+  font-size: 35px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: #fbaa06;
+}
+.draw-details{
+  font-size: 40px;
+  font-weight: bold;
+}
+.recap li {
+  text-align: center;
+}

@@ -1,0 +1,25 @@
+@media all and (orientation: portrait){
+  .formulaire{
+    width: 100%;
+    border-radius: 0;
+  }
+  .container-mobile{
+    margin:0;
+    padding: 0;
+  }
+  .form-group label{
+    font-size: 14px;
+  }
+  .draw-1{
+  padding: 50px 20px !important;
+  height: 80%;
+  }
+  .draw img{
+  width: 100% !important;
+  }
+  .draw-details{
+  font-size: 18px !important;
+  font-weight: bold;
+}
+}
+
