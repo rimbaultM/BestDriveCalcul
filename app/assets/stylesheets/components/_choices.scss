@@ -26,12 +26,22 @@
   position: absolute;
   width: 100%;
   z-index: 1;
-  top:18%;
+  top:11%;
   text-align:center;
 }
 .draw-1, .draw-2,.draw-3, .draw-4, .draw-5, .draw-6, .draw-7, .draw-8 {
   max-width: 75%;
-  padding: 40px 50px;
+  // padding: 40px 50px;
+  background-color: white;
+  margin: 0 auto;
+  position: relative;
+  border: 2px solid #fcd481;
+  display:none;
+  border-radius: 5px;
+}
+.draw-9, .draw-10,.draw-11, .draw-12, .draw-13, .draw-14, .draw-15, .draw-16 {
+  max-width: 75%;
+  // padding: 40px 50px;
   background-color: white;
   margin: 0 auto;
   position: relative;
@@ -41,7 +51,7 @@
 }
 .draw img{
   max-width: 100%;
-  width: 65%;
+  width: 55%;
 }
 .close{
   font-size: 35px;
@@ -56,4 +66,10 @@
 }
 .recap li {
   text-align: center;
+}
+.print img{
+  width: 10%;
+  height: auto;
+  position: absolute;
+  left: 20px;
 }

@@ -1,0 +1,85 @@
+// ---------- COMMUN --------
+    .logo-fat{
+      width: 350px;
+      margin: 30px auto;
+    }
+    .logo-fat img{
+      max-width: 100%;
+    }
+    .back{
+      font-size: 35px;
+      width: 90%;
+      margin: 0 auto 20px auto;
+      text-decoration: none;
+    }
+    .back a{
+      color: #fbaa06;
+    }
+    .back a:hover{
+      color: #ba8314;
+    }
+    .formulaire{
+      margin: 0 auto;
+      height: auto;
+      width: 90%;
+      border-radius: 10px;
+      background: #fbaa06;
+      position: relative;
+    }
+    .formulaire-title{
+      color: white;
+      color:#fbaa06;
+      position: absolute;
+      top: -20px;
+      left: 20px;
+      background-color: white;
+      border: 1px solid #fbaa06;
+      border-radius: 10px;
+      padding: 10px;
+      margin-right: 20px;
+    }
+    .formulaire-title h3{
+      margin: 0;
+      font-weight: bold;
+      font-size: 17px;
+    }
+    .formulaire-content{
+      padding: 30px 30px;
+    }
+    .formulaire .form-control{
+      width: 30%;
+      display: inline-block;
+      float: right;
+    }
+    .formulaire .form-group label{
+      margin-top: 4px;
+      color: white;
+      font-weight: bold;
+    }
+    .formulaire-submit {
+      background-color: white;
+      border: 1px solid #fbaa06;
+      border-radius: 10px;
+      color: #fbaa06;
+      width: 100%;
+    }
+    .montage-standard{
+      width: 100%;
+      height:100%;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: 0.3s ease-in 0s;
+    }
+    .montage-standard-bis{
+      width:50%;
+      height:100%;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-left: 25%;
+    }
+    #montage-1,#montage-2,#montage-3,#montage-4,#montage-5,#montage-6,#montage-7 {
+      display:none;
+    }
+

@@ -1,4 +1,25 @@
 @media all and (orientation: portrait){
+
+  // ---------- ACCUEIL --------
+
+      .accueil{
+        margin-top: 40px;
+      }
+      .accueil-title h2{
+        font-family: 'Lato', sans-serif;
+        font-size: 12px;
+      }
+      .accueil-title .row {
+        padding-top: 0;
+      }
+
+  // ---------- FORMULAIRE --------
+
+      .logo-fat{
+        width: 200px;
+        margin: 15px auto;
+      }
+
   .formulaire{
     width: 100%;
     border-radius: 0;
@@ -14,12 +35,27 @@
   padding: 50px 20px !important;
   height: 80%;
   }
-  .draw img{
-  width: 100% !important;
-  }
+  // .draw img{
+  // width: 100% !important;
+  // }
   .draw-details{
   font-size: 18px !important;
   font-weight: bold;
+  }
+  // ---------- ANSWER --------
+
+  .draw-1 img,.draw-2 img,.draw-3 img,.draw-4 img,.draw-5 img,.draw-6 img,.draw-7 img,.draw-8 img,.draw-9 img, .draw-10 img,.draw-11 img, .draw-12 img, .draw-13 img, .draw-14 img, .draw-15 img, .draw-16 img{
+  max-width: 100%;
+  width: 55%;
 }
+  .recap, .recap2{
+    font-size: 12px;
+    margin-top:20px;
+  }
+  .recap ul{
+    padding: 0;
+  }
+
+
 }
 

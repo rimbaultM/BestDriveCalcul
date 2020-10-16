@@ -17,15 +17,15 @@
       <div class="row">
         <div class="col-lg-6 col-12 ">
             <%= simple_form_for(@etroite) do |f| %>
-              <%= f.input :jantelargeur,placeholder:"pouces", label:"JANTES : Largueur" %>
-              <%= f.input :janteexterieur,placeholder:"mm", label:"JANTES : Coté exterieur" %>
-              <%= f.input :jantesepaisseur,placeholder:"mm", label:"JANTES : Epaisseur couronne" %>
-              <%= f.input :voilecreux,placeholder:"mm", label:"VOILE : Creux de voile" %>
-              <%= f.input :voileepaisseur,placeholder:"mm", label:"VOILE : Epaisseur" %>
-              <%= f.input :fam,placeholder:"mm", label:"F.A.M. : Coté exterieur" %>
-              <%= f.input :cic,placeholder:"mm", label:"Centre Inter Changeable: Epaisseur" %>
+              <%= f.input :jantelargeur,placeholder:"pouces", label:"JANTES : Largueur",required: true, %>
+              <%= f.input :janteexterieur,placeholder:"mm", label:"JANTES : Coté exterieur",required: true, %>
+              <%= f.input :jantesepaisseur,placeholder:"mm", label:"JANTES : Epaisseur couronne",required: true, %>
+              <%= f.input :voilecreux,placeholder:"mm", label:"VOILE : Creux de voile",required: true, %>
+              <%= f.input :voileepaisseur,placeholder:"mm", label:"VOILE : Epaisseur",required: true, %>
+              <%= f.input :fam,placeholder:"mm", label:"F.A.M. : Coté exterieur",required: true, %>
+              <%= f.input :cic,placeholder:"mm", label:"Centre Inter Changeable: Epaisseur",required: true, %>
               <div class="form-actions">
-                <%= f.button :submit, "Calcul des voies possibles", class: "btn btn-flat formulaire-submit" %>
+                <%= f.button :submit, "Calcul des voies possibles", class: "btn btn-flat formulaire-submit", formtarget: "_blank" %>
               </div>
             <% end %>
         </div>

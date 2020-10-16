@@ -26,5 +26,29 @@
     $(".close").click(function(){ $(".draw-8").hide(); });
     $(".calcul-8").click(function(){ $(".draw-8").show(); });
 
+    $(".close").click(function(){ $(".draw-9").hide(); });
+    $(".calcul-9").click(function(){ $(".draw-9").show(); });
+
+    $(".close").click(function(){ $(".draw-10").hide(); });
+    $(".calcul-10").click(function(){ $(".draw-10").show(); });
+
+    $(".close").click(function(){ $(".draw-11").hide(); });
+    $(".calcul-11").click(function(){ $(".draw-11").show(); });
+
+    $(".close").click(function(){ $(".draw-12").hide(); });
+    $(".calcul-12").click(function(){ $(".draw-12").show(); });
+
+    $(".close").click(function(){ $(".draw-13").hide(); });
+    $(".calcul-13").click(function(){ $(".draw-13").show(); });
+
+    $(".close").click(function(){ $(".draw-14").hide(); });
+    $(".calcul-14").click(function(){ $(".draw-14").show(); });
+
+    $(".close").click(function(){ $(".draw-15").hide(); });
+    $(".calcul-15").click(function(){ $(".draw-15").show(); });
+
+    $(".close").click(function(){ $(".draw-16").hide(); });
+    $(".calcul-16").click(function(){ $(".draw-16").show(); });
+
 }
  export {draw}

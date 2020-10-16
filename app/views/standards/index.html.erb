@@ -1,4 +1,3 @@
-
 <div class="container container-mobile">
   <div class="logo-fat">
     <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602678647/logoopacity_grmfql.png") %>
@@ -16,12 +15,12 @@
       <div class="row">
         <div class="col-lg-6 col-12 ">
             <%= simple_form_for(@standard) do |f| %>
-              <%= f.input :jantelargeur,placeholder:"pouces", label:"JANTES : Largueur" %>
-              <%= f.input :janteexterieur,placeholder:"mm", label:"JANTES : Coté exterieur" %>
-              <%= f.input :jantesepaisseur,placeholder:"mm", label:"JANTES : Epaisseur couronne" %>
-              <%= f.input :voilecreux,placeholder:"mm", label:"VOILE : Creux de voile" %>
-              <%= f.input :voileepaisseur,placeholder:"mm", label:"VOILE : Epaisseur" %>
-              <%= f.input :fam,placeholder:"mm", label:"F.A.M. : Coté exterieur" %>
+              <%= f.input :jantelargeur,placeholder:"pouces", label:"JANTES : Largueur",required: true %>
+              <%= f.input :janteexterieur,placeholder:"mm", label:"JANTES : Coté exterieur",required: true %>
+              <%= f.input :jantesepaisseur,placeholder:"mm", label:"JANTES : Epaisseur couronne",required: true %>
+              <%= f.input :voilecreux,placeholder:"mm", label:"VOILE : Creux de voile",required: true %>
+              <%= f.input :voileepaisseur,placeholder:"mm", label:"VOILE : Epaisseur",required: true %>
+              <%= f.input :fam,placeholder:"mm", label:"F.A.M. : Coté exterieur",required: true %>
               <div class="form-actions">
                 <%= f.button :submit, "Calcul des voies possibles", class: "btn btn-flat formulaire-submit", formtarget: "_blank"%>
               </div>
@@ -38,106 +37,4 @@
       </div>
     </div>
   </div>
-
-
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <!--   <form name="test" action="">
-        <div id="menu">
-            <p id="titre">Données d'entrées : roue standard</p>
-            <div id="texte">
-                <ul>
-                    <li>JANTES : Largueur </li>
-                    <li>JANTES : Coté exterieur</li>
-                    <li>JANTES : Epaisseur couronne</li>
-                    <li>VOILE : Creux de voile</li>
-                    <li>VOILE : Epaisseur</li>
-                    <li>F.A.M. : Coté exterieur</li>
-                </ul>
-            </div>
-            <div id="inputmenu1">
-                <ul>
-                    <li>
-                            <input id="input1" type="number"  required name="input1" min="10" max="18">
-                            <span class="validity" required></span>
-                    </li>
-                    <li>
-                           <input id="input2" type="number" required min="50" max="200" required name="input2">
-                            <span class="validity"  required></span>
-                    </li>
-                    <li>
-                            <input id="input3" type="number" required min="05" max="30" required name="input3">
-                            <span class="validity"  required></span>
-                    </li>
-                    <li>
-                            <input id="input4" type="number" required min="50" max="200" required name="input4">
-                            <span class="validity"  required></span>
-                    </li>
-                    <li>
-                            <input id="input5" type="number" required min="05" max="30" required name="input5">
-                            <span class="validity"  required></span>
-                    </li>
-                    <li>
-                            <input id="input6" type="number" required min="100" max="2500" required name="input6">
-                            <span class="validity"  required></span>
-                    </li>
-                </ul>
-            </div>
-            <div id="info">
-                <ul>
-                    <li>pouces</li>
-                    <li>mm</li>
-                    <li>mm</li>
-                    <li>mm</li>
-                    <li>mm</li>
-                    <li>mm</li>
-                </ul>
-            </div>
-            <div id="dessin">
-                    <img class="H"id="largeur1" src="../Images/largeur.jpg">
-                    <img class="H"id="exterieur1" src="../Images/exterieur1.jpg">
-                    <img class="H"id="couronne1" src="../Images/couronne1.jpg">
-                    <img class="V"id="exterieur2" src="../Images/exterieur2.jpg">
-                    <img class="V"id="epaisseur1" src="../Images/epaisseur1.jpg">
-                    <img class="H"id="exterieur3" src="../Images/exterieur3.jpg">
-            </div>
-        </div>
-        <div id="calcul">
-            <input class="envoyer"  type="button" name="bouton" value="Calcul des voies possibles"  onclick="ValiderInput(this.form)"  >
-            </div>
-            </form>
-        <div>
-            <ul id="resultat">
-                <li id="valInput1"></li>
-                <li id="valInput2"></li>
-                <li id="valInput3"></li>
-                <li id="valInput4"></li>
-                <li id="valInput5"></li>
-                <li id="valInput6"></li>
-                <li id="valInput7"></li>
-                <li id="valInput8"></li>
-            </ul>
-        </div>
-        <div id="reload">
-            <a href="javascript:window.location.reload()"><img src="../Images/reload.png"></a>
-        </div> -->

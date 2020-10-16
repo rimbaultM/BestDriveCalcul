@@ -1,0 +1,207 @@
+<% input1 = (@etroite.fam + ((@etroite.janteexterieur )*2)-((@etroite.voilecreux )*2)-((@etroite.jantelargeur) * 25.4)-((@etroite.voileepaisseur)*2)).round(-1)%>
+<% input2 = (@etroite.fam + ((@etroite.jantesepaisseur )*2)+((@etroite.janteexterieur)*2)-((@etroite.voilecreux )*2)-((@etroite.jantelargeur) * 25.4)).round(-1)%>
+<% input3 = (@etroite.fam + ((@etroite.janteexterieur )*2)+((@etroite.cic)*2)-((@etroite.voilecreux )*2)-((@etroite.jantelargeur) * 25.4)).round(-1)%>
+<% input4 = (@etroite.fam + ((@etroite.voileepaisseur )*2)+((@etroite.jantesepaisseur)*2)+((@etroite.janteexterieur)*2)+((@etroite.cic)*2)-((@etroite.voilecreux )*2)-((@etroite.jantelargeur) * 25.4)).round(-1)%>
+<% input5 = (@etroite.fam + ((@etroite.jantelargeur) * 25.4)-((@etroite.voilecreux )*2)-((@etroite.janteexterieur)*2)-((@etroite.jantesepaisseur )*2)-((@etroite.voileepaisseur)*2)).round(-1)%>
+<% input6 = (@etroite.fam + @etroite.cic+((@etroite.jantelargeur) * 25.4)-((@etroite.voilecreux )*2)-((@etroite.janteexterieur)*2)-((@etroite.jantesepaisseur)*2)).round(-1)%>
+<% input7 = (@etroite.fam + ((@etroite.jantelargeur) * 25.4)-((@etroite.voilecreux )*2)-((@etroite.janteexterieur )*2)).round(-1)%>
+<% input8 = (@etroite.fam + ((@etroite.voileepaisseur )*2)+((@etroite.cic)*2)+((@etroite.jantelargeur) * 25.4)-((@etroite.voilecreux )*2)-((@etroite.janteexterieur )*2)).round(-1)%>
+<% input9 = (@etroite.fam + ((@etroite.voilecreux )*2)+((@etroite.janteexterieur)*2)-((@etroite.jantelargeur) * 25.4)-((@etroite.voileepaisseur)*2)).round(-1)%>
+<% input10 = (@etroite.fam + ((@etroite.voilecreux )*2)+((@etroite.janteexterieur)*2)+((@etroite.cic)*2)-((@etroite.jantelargeur) * 25.4)).round(-1)%>
+<% input11 = (@etroite.fam + ((@etroite.voilecreux )*2)+((@etroite.jantesepaisseur )*2)+((@etroite.janteexterieur)*2)-((@etroite.jantelargeur)* 25.4)).round(-1)%>
+<% input12 = (@etroite.fam + ((@etroite.voilecreux )*2)+((@etroite.voileepaisseur)*2)+((@etroite.jantesepaisseur )*2)+((@etroite.janteexterieur)*2)+((@etroite.cic)*2)-((@etroite.jantelargeur)* 25.4)).round(-1)%>
+<% input13 = (@etroite.fam + ((@etroite.voilecreux )*2)+((@etroite.jantelargeur) * 25.4)-((@etroite.janteexterieur)*2)-((@etroite.jantesepaisseur )*2)-((@etroite.voileepaisseur)*2)).round(-1)%>
+<% input14 = (@etroite.fam + ((@etroite.voilecreux )*2)+((@etroite.cic)*2)+((@etroite.jantelargeur) * 25.4)-((@etroite.janteexterieur)*2)-((@etroite.jantesepaisseur )*2)).round(-1)%>
+<% input15 = (@etroite.fam + ((@etroite.voilecreux )*2)+((@etroite.jantelargeur) * 25.4)-((@etroite.janteexterieur)*2)).round(-1)%>
+<% input16 = (@etroite.fam + ((@etroite.voilecreux )*2)+((@etroite.voileepaisseur)*2)+((@etroite.cic)*2)+((@etroite.jantelargeur) * 25.4)-((@etroite.janteexterieur)*2)).round(-1)%>
+
+
+
+
+
+
+
+
+
+
+<div class="container container-mobile">
+  <div class="logo-fat">
+    <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602678647/logoopacity_grmfql.png") %>
+  </div>
+  <%= render 'shared/recap2' %>
+  <div class="choices">
+    <ul class="choices-line-1">
+      <li class="calcul-1"><%= input1 %></li>
+      <li class="calcul-2"><%= input2 %></li>
+      <li class="calcul-3"><%= input3 %></li>
+      <li class="calcul-4"><%= input4 %></li>
+      <li class="calcul-5"><%= input5 %></li>
+      <li class="calcul-6"><%= input6 %></li>
+      <li class="calcul-7"><%= input7 %></li>
+      <li class="calcul-8"><%= input8 %></li>
+    </ul>
+    <ul class="choices-line-2">
+      <li class="calcul-9"><%= input9 %></li>
+      <li class="calcul-10"><%= input10 %></li>
+      <li class="calcul-11"><%= input11 %></li>
+      <li class="calcul-12"><%= input12 %></li>
+      <li class="calcul-13"><%= input13 %></li>
+      <li class="calcul-14"><%= input14 %></li>
+      <li class="calcul-15"><%= input15 %></li>
+      <li class="calcul-16"><%= input16 %></li>
+    </ul>
+  </div>
+
+
+</div>
+   <div class="draw">
+    <div class="draw-1">
+      <div class="close"><i class="far fa-times-circle"></i></div>
+      <div class="draw-details">
+        <%= render 'shared/print' %>
+        <%= input1 %>
+      </div>
+      <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602844600/Montage62_jfl2be.png") %>
+      <%= render 'shared/recap2' %>
+
+    </div>
+    <div class="draw-2">
+      <div class="close"><i class="far fa-times-circle"></i></div>
+      <div class="draw-details">
+        <%= render 'shared/print' %>
+        <%= input2 %>
+      </div>
+      <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602844642/Montage61_xzj31e.png") %>
+      <%= render 'shared/recap2' %>
+    </div>
+    <div class="draw-3">
+      <div class="close"><i class="far fa-times-circle"></i></div>
+      <div class="draw-details">
+        <%= render 'shared/print' %>
+        <%= input3 %>
+      </div>
+      <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602844690/Montage52_ri25od.png") %>
+      <%= render 'shared/recap2' %>
+    </div>
+    <div class="draw-4">
+      <div class="close"><i class="far fa-times-circle"></i></div>
+      <div class="draw-details">
+        <%= render 'shared/print' %>
+        <%= input4 %>
+      </div>
+      <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602844724/Montage51_prrc6h.png") %>
+      <%= render 'shared/recap2' %>
+    </div>
+    <div class="draw-5">
+      <div class="close"><i class="far fa-times-circle"></i></div>
+      <div class="draw-details">
+        <%= render 'shared/print' %>
+        <%= input5 %>
+      </div>
+      <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602844772/Montage82_tzfom3.png") %>
+      <%= render 'shared/recap2' %>
+    </div>
+    <div class="draw-6">
+      <div class="close"><i class="far fa-times-circle"></i></div>
+      <div class="draw-details">
+        <%= render 'shared/print' %>
+        <%= input6 %>
+      </div>
+      <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602844788/Montage81_tlcg4o.png") %>
+      <%= render 'shared/recap2' %>
+    </div>
+    <div class="draw-7">
+      <div class="close"><i class="far fa-times-circle"></i></div>
+      <div class="draw-details">
+        <%= render 'shared/print' %>
+        <%= input7 %>
+      </div>
+      <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602844823/Montage72_deqqlk.png") %>
+      <%= render 'shared/recap2' %>
+    </div>
+    <div class="draw-8">
+      <div class="close"><i class="far fa-times-circle"></i></div>
+      <div class="draw-details">
+        <%= render 'shared/print' %>
+        <%= input8 %>
+      </div>
+      <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602844834/Montage71_isb3wr.png") %>
+      <%= render 'shared/recap2' %>
+    </div>
+    <div class="draw-9">
+      <div class="close"><i class="far fa-times-circle"></i></div>
+      <div class="draw-details">
+        <%= render 'shared/print' %>
+        <%= input9 %>
+      </div>
+      <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602844600/Montage62_jfl2be.png") %>
+      <%= render 'shared/recap2' %>
+    </div>
+    <div class="draw-10">
+      <div class="close"><i class="far fa-times-circle"></i></div>
+      <div class="draw-details">
+        <%= render 'shared/print' %>
+        <%= input10 %>
+      </div>
+      <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602844642/Montage61_xzj31e.png") %>
+      <%= render 'shared/recap2' %>
+    </div>
+    <div class="draw-11">
+      <div class="close"><i class="far fa-times-circle"></i></div>
+      <div class="draw-details">
+        <%= render 'shared/print' %>
+        <%= input11 %>
+      </div>
+      <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602844690/Montage52_ri25od.png") %>
+      <%= render 'shared/recap2' %>
+    </div>
+    <div class="draw-12">
+      <div class="close"><i class="far fa-times-circle"></i></div>
+      <div class="draw-details">
+        <%= render 'shared/print' %>
+        <%= input12 %>
+      </div>
+      <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602844724/Montage51_prrc6h.png") %>
+      <%= render 'shared/recap2' %>
+    </div>
+    <div class="draw-13">
+      <div class="close"><i class="far fa-times-circle"></i></div>
+      <div class="draw-details">
+        <%= render 'shared/print' %>
+        <%= input13 %>
+      </div>
+      <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602844772/Montage82_tzfom3.png") %>
+      <%= render 'shared/recap2' %>
+    </div>
+    <div class="draw-14">
+      <div class="close"><i class="far fa-times-circle"></i></div>
+      <div class="draw-details">
+        <%= render 'shared/print' %>
+        <%= input14 %>
+      </div>
+      <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602844788/Montage81_tlcg4o.png") %>
+      <%= render 'shared/recap2' %>
+    </div>
+    <div class="draw-15">
+      <div class="close"><i class="far fa-times-circle"></i></div>
+      <div class="draw-details">
+        <%= render 'shared/print' %>
+        <%= input15 %>
+      </div>
+      <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602844823/Montage72_deqqlk.png") %>
+      <%= render 'shared/recap2' %>
+      <%= render 'shared/print' %>
+    </div>
+    <div class="draw-16">
+      <div class="close"><i class="far fa-times-circle"></i></div>
+      <div class="draw-details">
+        <%= render 'shared/print' %>
+        <%= input16 %>
+      </div>
+      <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602844834/Montage71_isb3wr.png") %>
+      <%= render 'shared/recap2' %>
+    </div>
+  </div>
+
+
+
