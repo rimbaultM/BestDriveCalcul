@@ -7,4 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Bestdrive = User.new(email: "Bestdrive@gmail.com", password: "bestdrive")
 Bestdrive.save!
+
+Michelin = User.new(email: "michelin@gmail.com", password: "michelin")
+Michelin.save!
 puts "Users created!"

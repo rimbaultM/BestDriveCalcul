@@ -24,6 +24,12 @@ height: 250px;
     height: 40px;
     position: fixed;
 }
+#logomichelin{
+    bottom: 30px;
+    right: 30px;
+    height: 80px;
+    position: fixed;
+}
 .roue-liste{
   text-align: center;
   margin: 0;
@@ -64,6 +70,18 @@ height: 250px;
 }
 .roue img:hover{
   border:4px solid #fbaa06;
+  -webkit-filter: grayscale(0); /* Pour les navigateurs Chrome, Safari, Opera */
+  filter: grayscale(0); /* Firefox */
+}
+.roue2 img{
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  -webkit-filter: grayscale(100%); /* Pour les navigateurs Chrome, Safari, Opera */
+  filter: grayscale(100%); /* Firefox */
+}
+.roue2 img:hover{
+  border:4px solid #284f9c;
   -webkit-filter: grayscale(0); /* Pour les navigateurs Chrome, Safari, Opera */
   filter: grayscale(0); /* Firefox */
 }

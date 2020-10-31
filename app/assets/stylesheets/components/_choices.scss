@@ -10,6 +10,15 @@
   padding: 10px 0;
   font-weight: bold;
 }
+.choices2 li{
+  display: inline-block;
+  width: 20%;
+  text-align: center;
+  border: 1px solid #284f9c;
+  border-radius: 5px;
+  padding: 10px 0;
+  font-weight: bold;
+}
 .choices li:hover{
 
   border: 3px solid #fbaa06;
@@ -17,9 +26,16 @@
   background: rgba(210,210,210,0.5);
   text-decoration: none;
 }
-.choices ul{
+.choices2 li:hover{
+
+  border: 3px solid #284f9c;
+  color:#284f9c;
+  background: rgba(210,210,210,0.5);
+  text-decoration: none;
+}
+.choices ul,.choices2 ul{
   margin-top: 30px;
-  margin-left: 25%;
+  margin-left: 12%;
   padding: 0;
 }
 .draw{
@@ -35,9 +51,9 @@
   background-color: white;
   margin: 0 auto;
   position: relative;
-  border: 2px solid #fcd481;
+  border: 2px solid #333333;
   display:none;
-  border-radius: 5px;
+  border-radius:10px;
 }
 .draw-9, .draw-10,.draw-11, .draw-12, .draw-13, .draw-14, .draw-15, .draw-16 {
   max-width: 75%;
@@ -45,9 +61,9 @@
   background-color: white;
   margin: 0 auto;
   position: relative;
-  border: 2px solid #fcd481;
+  border: 2px solid #333333;
   display:none;
-  border-radius: 5px;
+  border-radius:10px
 }
 .draw img{
   max-width: 100%;
@@ -60,12 +76,20 @@
   right: 15px;
   color: #fbaa06;
 }
+.close2{
+  font-size: 35px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: #284f9c;
+}
 .draw-details{
   font-size: 40px;
   font-weight: bold;
 }
 .recap li {
   text-align: center;
+  margin-left: -100px;
 }
 .print img{
   width: 10%;

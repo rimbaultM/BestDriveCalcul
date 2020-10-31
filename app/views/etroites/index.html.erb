@@ -1,15 +1,27 @@
-
 <div class="container container-mobile">
   <div class="logo-fat">
-    <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602678647/logoopacity_grmfql.png") %>
+    <% if current_user.email == "bestdrive@gmail.com" %>
+      <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602678647/logoopacity_grmfql.png") %>
+    <% elsif current_user.email == "michelin@gmail.com" %>
+      <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1604178048/michelin_png_ti1aar.png") %>
+    <% end %>
   </div>
-  <div class="back">
+  <% if current_user.email == "bestdrive@gmail.com" %>
+    <div class="back">
+  <% elsif current_user.email == "michelin@gmail.com" %>
+    <div class="back2">
+  <% end %>
     <%= link_to root_path do %>
            <i class="fas fa-arrow-left"></i>
     <% end %>
   </div>
+  <% if current_user.email == "bestdrive@gmail.com" %>
   <div class="formulaire">
     <div class="formulaire-title">
+  <% elsif current_user.email == "michelin@gmail.com" %>
+  <div class="formulaire2">
+    <div class="formulaire-title2">
+  <% end %>
       <h3>Données d'entrées : roue étroite</h3>
     </div>
 
@@ -25,7 +37,11 @@
               <%= f.input :fam,placeholder:"mm", label:"F.A.M. : Coté exterieur",required: true %>
               <%= f.input :cic,placeholder:"mm", label:"C.I.C.: Epaisseur",required: true %>
               <div class="form-actions">
-                <%= f.button :submit, "Calcul des voies possibles", class: "btn btn-flat formulaire-submit", formtarget: "_blank" %>
+                <% if current_user.email == "bestdrive@gmail.com" %>
+                  <%= f.button :submit, "Calcul des voies possibles", class: "btn btn-flat formulaire-submit", formtarget: "_blank"%>
+                <% elsif current_user.email == "michelin@gmail.com" %>
+                  <%= f.button :submit, "Calcul des voies possibles", class: "btn btn-flat formulaire-submit2", formtarget: "_blank"%>
+                <% end %>
               </div>
             <% end %>
         </div>

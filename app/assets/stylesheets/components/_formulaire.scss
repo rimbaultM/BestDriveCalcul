@@ -2,11 +2,20 @@
     .logo-fat{
       width: 350px;
       margin: 30px auto;
+
+
     }
     .logo-fat img{
       max-width: 100%;
+      margin-left: -30px;
     }
     .back{
+      font-size: 35px;
+      width: 90%;
+      margin: 0 auto 20px auto;
+      text-decoration: none;
+    }
+    .back2{
       font-size: 35px;
       width: 90%;
       margin: 0 auto 20px auto;
@@ -15,7 +24,13 @@
     .back a{
       color: #fbaa06;
     }
+    .back2 a{
+      color: #284f9c;
+    }
     .back a:hover{
+      color: #ba8314;
+    }
+    .back2 a:hover{
       color: #ba8314;
     }
     .formulaire{
@@ -24,6 +39,14 @@
       width: 90%;
       border-radius: 10px;
       background: #fbaa06;
+      position: relative;
+    }
+    .formulaire2{
+      margin: 0 auto;
+      height: auto;
+      width: 90%;
+      border-radius: 10px;
+      background: #284f9c;
       position: relative;
     }
     .formulaire-title{
@@ -38,7 +61,24 @@
       padding: 10px;
       margin-right: 20px;
     }
+    .formulaire-title2{
+      color: white;
+      color:#284f9c;
+      position: absolute;
+      top: -20px;
+      left: 20px;
+      background-color: white;
+      border: 1px solid #284f9c;
+      border-radius: 10px;
+      padding: 10px;
+      margin-right: 20px;
+    }
     .formulaire-title h3{
+      margin: 0;
+      font-weight: bold;
+      font-size: 17px;
+    }
+    .formulaire-title2 h3{
       margin: 0;
       font-weight: bold;
       font-size: 17px;
@@ -46,12 +86,12 @@
     .formulaire-content{
       padding: 30px 30px;
     }
-    .formulaire .form-control{
+    .formulaire .form-control,.formulaire2 .form-control{
       width: 30%;
       display: inline-block;
       float: right;
     }
-    .formulaire .form-group label{
+    .formulaire .form-group label,.formulaire2 .form-group label{
       margin-top: 4px;
       color: white;
       font-weight: bold;
@@ -61,6 +101,13 @@
       border: 1px solid #fbaa06;
       border-radius: 10px;
       color: #fbaa06;
+      width: 100%;
+    }
+    .formulaire-submit2 {
+      background-color: white;
+      border: 1px solid #284f9c;
+      border-radius: 10px;
+      color: #284f9c;
       width: 100%;
     }
     .montage-standard{

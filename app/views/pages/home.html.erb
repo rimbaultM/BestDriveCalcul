@@ -9,7 +9,11 @@
     </div>
     <div class="row">
       <div class="col-md-6 ">
+        <% if current_user.email == "bestdrive@gmail.com" %>
         <div class="roue">
+        <% elsif current_user.email == "michelin@gmail.com" %>
+        <div class="roue2">
+        <% end %>
             <ul class="roue-liste">
               <li>
                   <%= link_to standards_path do %>
@@ -23,11 +27,15 @@
         </div>
       </div>
       <div class="col-md-6 ">
+        <% if current_user.email == "bestdrive@gmail.com" %>
         <div class="roue">
+        <% elsif current_user.email == "michelin@gmail.com" %>
+        <div class="roue2">
+        <% end %>
             <ul class="roue-liste">
               <li>
                 <%= link_to etroites_path do %>
-                    <%= image_tag "https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602946672/photoetroitebis_pyavca.jpg" %>
+                    <%= image_tag "https://res.cloudinary.com/dc9pm7uj8/image/upload/v1604180354/tracteur_roue_%C3%A9ttroite_dmpgpr.png" %>
                   <% end %>
               </li>
               <li>
@@ -39,10 +47,14 @@
     </div>
 <!--   </div> -->
 </div>
+  <%= link_to destroy_user_session_path, method: :delete  do%>
+    <% if current_user.email == "bestdrive@gmail.com" %>
+      <img src="https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602678647/logoopacity_grmfql.png" id="logo">
+    <% else current_user.email == "michelin@gmail.com" %>
+      <img src="https://res.cloudinary.com/dc9pm7uj8/image/upload/v1604178048/michelin_png_ti1aar.png" id="logomichelin">
+    <% end %>
+  <% end %>
 
-<%= link_to destroy_user_session_path, method: :delete  do%>
-  <img src="https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602678647/logoopacity_grmfql.png" id="logo">
-<% end %>
 
 
 

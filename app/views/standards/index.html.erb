@@ -1,40 +1,57 @@
 <div class="container container-mobile">
   <div class="logo-fat">
-    <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602678647/logoopacity_grmfql.png") %>
+    <% if current_user.email == "bestdrive@gmail.com" %>
+      <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602678647/logoopacity_grmfql.png") %>
+    <% elsif current_user.email == "michelin@gmail.com" %>
+      <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1604178048/michelin_png_ti1aar.png") %>
+    <% end %>
   </div>
-  <div class="back">
+  <% if current_user.email == "bestdrive@gmail.com" %>
+    <div class="back">
+  <% elsif current_user.email == "michelin@gmail.com" %>
+    <div class="back2">
+  <% end %>
     <%= link_to root_path do %>
            <i class="fas fa-arrow-left"></i>
     <% end %>
   </div>
+  <% if current_user.email == "bestdrive@gmail.com" %>
   <div class="formulaire">
     <div class="formulaire-title">
+  <% elsif current_user.email == "michelin@gmail.com" %>
+  <div class="formulaire2">
+    <div class="formulaire-title2">
+  <% end %>
       <h3>Données d'entrées : roue standard</h3>
     </div>
     <div class="formulaire-content">
       <div class="row">
         <div class="col-lg-6 col-12 ">
-            <%= simple_form_for(@standard) do |f| %>
-              <%= f.input :jantelargeur,placeholder:"pouces", label:"JANTES : Largueur",required: true %>
-              <%= f.input :janteexterieur,placeholder:"mm", label:"JANTES : Coté exterieur",required: true %>
-              <%= f.input :jantesepaisseur,placeholder:"mm", label:"JANTES : Epaisseur couronne",required: true %>
-              <%= f.input :voilecreux,placeholder:"mm", label:"VOILE : Creux de voile",required: true %>
-              <%= f.input :voileepaisseur,placeholder:"mm", label:"VOILE : Epaisseur",required: true %>
-              <%= f.input :fam,placeholder:"mm", label:"F.A.M. : Coté exterieur",required: true %>
-              <div class="form-actions">
+          <%= simple_form_for(@standard) do |f| %>
+            <%= f.input :jantelargeur,placeholder:"pouces", label:"JANTES : Largueur",required: true %>
+            <%= f.input :janteexterieur,placeholder:"mm", label:"JANTES : Coté exterieur",required: true %>
+            <%= f.input :jantesepaisseur,placeholder:"mm", label:"JANTES : Epaisseur couronne",required: true %>
+            <%= f.input :voilecreux,placeholder:"mm", label:"VOILE : Creux de voile",required: true %>
+            <%= f.input :voileepaisseur,placeholder:"mm", label:"VOILE : Epaisseur",required: true %>
+            <%= f.input :fam,placeholder:"mm", label:"F.A.M. : Coté exterieur",required: true %>
+            <div class="form-actions">
+              <% if current_user.email == "bestdrive@gmail.com" %>
                 <%= f.button :submit, "Calcul des voies possibles", class: "btn btn-flat formulaire-submit", formtarget: "_blank"%>
-              </div>
-            <% end %>
+              <% elsif current_user.email == "michelin@gmail.com" %>
+                <%= f.button :submit, "Calcul des voies possibles", class: "btn btn-flat formulaire-submit2", formtarget: "_blank"%>
+              <% end %>
+            </div>
+          <% end %>
         </div>
-        <div class="col-lg-6 col-12 ">
-          <div class="montage-standard" id="montage-1" style="background-image:  url(<%= image_path("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602751416/largeur_kazrvk.jpg") %>)"></div>
-          <div class="montage-standard" id="montage-2" style="background-image:  url(<%= image_path("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602754694/exterieur1_ihs10y.jpg") %>)"></div>
-          <div class="montage-standard" id="montage-3" style="background-image:  url(<%= image_path("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602755043/couronne1_k1qkzp.jpg") %>)"></div>
-          <div class="montage-standard-bis" id="montage-4" style="background-image:  url(<%= image_path("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602755095/exterieur2_kwhiaz.jpg") %>)"></div>
-          <div class="montage-standard-bis" id="montage-5" style="background-image:  url(<%= image_path("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602755153/epaisseur1_kbou3l.jpg") %>)"></div>
-          <div class="montage-standard" id="montage-6" style="background-image:  url(<%= image_path("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602755154/exterieur3_vzdi1z.jpg") %>)"></div>
-        </div>
+      <div class="col-lg-6 col-12 ">
+        <div class="montage-standard" id="montage-1" style="background-image:  url(<%= image_path("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602751416/largeur_kazrvk.jpg") %>)"></div>
+        <div class="montage-standard" id="montage-2" style="background-image:  url(<%= image_path("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602754694/exterieur1_ihs10y.jpg") %>)"></div>
+        <div class="montage-standard" id="montage-3" style="background-image:  url(<%= image_path("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602755043/couronne1_k1qkzp.jpg") %>)"></div>
+        <div class="montage-standard-bis" id="montage-4" style="background-image:  url(<%= image_path("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602755095/exterieur2_kwhiaz.jpg") %>)"></div>
+        <div class="montage-standard-bis" id="montage-5" style="background-image:  url(<%= image_path("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602755153/epaisseur1_kbou3l.jpg") %>)"></div>
+        <div class="montage-standard" id="montage-6" style="background-image:  url(<%= image_path("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602755154/exterieur3_vzdi1z.jpg") %>)"></div>
       </div>
+    </div>
     </div>
   </div>
 </div>

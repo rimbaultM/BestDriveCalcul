@@ -7,37 +7,43 @@
   <% input7 = (@standard.fam + ((@standard.voilecreux )*2)+((@standard.jantelargeur) * 25.4)-((@standard.janteexterieur)*2)-((@standard.jantesepaisseur)*2)).round(-1)%>
   <% input8 = (@standard.fam + ((@standard.voilecreux )*2)+((@standard.jantesepaisseur)*2)+((@standard.jantelargeur) * 25.4)-((@standard.janteexterieur)*2)).round(-1)%>
   <div class="container container-mobile">
-    <div class="logo-fat">
+   <div class="logo-fat">
+    <% if current_user.email == "bestdrive@gmail.com" %>
       <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602678647/logoopacity_grmfql.png") %>
+    <% elsif current_user.email == "michelin@gmail.com" %>
+      <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1604178048/michelin_png_ti1aar.png") %>
+    <% end %>
     </div>
-    <div class="back">
-
-    </div>
+<!--     <div class="back">
+    </div> -->
 
 
     <%= render 'shared/recap' %>
+  <% if current_user.email == "bestdrive@gmail.com" %>
+    <div class="choices">
+  <% elsif current_user.email == "michelin@gmail.com" %>
+    <div class="choices2">
+  <% end %>
+      <ul class="choices-line-1">
+        <li class="calcul-1"><%= input1 %></li>
+        <li class="calcul-2"><%= input2 %></li>
+        <li class="calcul-3"><%= input3 %></li>
+        <li class="calcul-4"><%= input4 %></li>
+      </ul>
 
-  <div class="choices">
-    <ul class="choices-line-1">
-      <li class="calcul-1"><%= input1 %></li>
-      <li class="calcul-2"><%= input2 %></li>
-      <li class="calcul-3"><%= input3 %></li>
-      <li class="calcul-4"><%= input4 %></li>
-    </ul>
-
-    <ul class="choices-line-2">
-      <li class="calcul-5"><%= input5 %></li>
-      <li class="calcul-6"><%= input6 %></li>
-      <li class="calcul-7"><%= input7 %></li>
-      <li class="calcul-8"><%= input8 %></li>
-    </ul>
-  </div>
+      <ul class="choices-line-2">
+        <li class="calcul-5"><%= input5 %></li>
+        <li class="calcul-6"><%= input6 %></li>
+        <li class="calcul-7"><%= input7 %></li>
+        <li class="calcul-8"><%= input8 %></li>
+      </ul>
+    </div>
 
 
 </div>
    <div class="draw">
     <div class="draw-1">
-      <div class="close"><i class="far fa-times-circle"></i></div>
+      <%= render 'shared/close' %>
       <div class="draw-details">
         <%= input1 %>
       </div>
@@ -45,7 +51,7 @@
       <%= render 'shared/recap' %>
     </div>
     <div class="draw-2">
-      <div class="close"><i class="far fa-times-circle"></i></div>
+      <%= render 'shared/close' %>
       <div class="draw-details">
         <%= input2 %>
       </div>
@@ -53,7 +59,8 @@
       <%= render 'shared/recap' %>
     </div>
     <div class="draw-3">
-      <div class="close"><i class="far fa-times-circle"></i></div>
+      <%= render 'shared/close' %>
+
       <div class="draw-details">
         <%= input3 %>
       </div>
@@ -61,7 +68,7 @@
       <%= render 'shared/recap' %>
     </div>
     <div class="draw-4">
-      <div class="close"><i class="far fa-times-circle"></i></div>
+      <%= render 'shared/close' %>
       <div class="draw-details">
         <%= input4 %>
       </div>
@@ -69,7 +76,7 @@
       <%= render 'shared/recap' %>
     </div>
     <div class="draw-5">
-      <div class="close"><i class="far fa-times-circle"></i></div>
+      <%= render 'shared/close' %>
       <div class="draw-details">
         <%= input5 %>
       </div>
@@ -77,7 +84,7 @@
       <%= render 'shared/recap' %>
     </div>
     <div class="draw-6">
-      <div class="close"><i class="far fa-times-circle"></i></div>
+      <%= render 'shared/close' %>
       <div class="draw-details">
         <%= input6 %>
       </div>
@@ -85,7 +92,7 @@
       <%= render 'shared/recap' %>
     </div>
     <div class="draw-7">
-      <div class="close"><i class="far fa-times-circle"></i></div>
+      <%= render 'shared/close' %>
       <div class="draw-details">
         <%= input7 %>
       </div>
@@ -93,7 +100,7 @@
       <%= render 'shared/recap' %>
     </div>
     <div class="draw-8">
-      <div class="close"><i class="far fa-times-circle"></i></div>
+      <%= render 'shared/close' %>
       <div class="draw-details">
         <%= input8 %>
       </div>

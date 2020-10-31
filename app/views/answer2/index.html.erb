@@ -15,58 +15,55 @@
 <% input15 = (@etroite.fam + ((@etroite.voilecreux )*2)+((@etroite.jantelargeur) * 25.4)-((@etroite.janteexterieur)*2)).round(-1)%>
 <% input16 = (@etroite.fam + ((@etroite.voilecreux )*2)+((@etroite.voileepaisseur)*2)+((@etroite.cic)*2)+((@etroite.jantelargeur) * 25.4)-((@etroite.janteexterieur)*2)).round(-1)%>
 
-
-
-
-
-
-
-
-
-
 <div class="container container-mobile">
-  <div class="logo-fat">
+ <div class="logo-fat">
+  <% if current_user.email == "bestdrive@gmail.com" %>
     <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602678647/logoopacity_grmfql.png") %>
+  <% elsif current_user.email == "michelin@gmail.com" %>
+    <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1604178048/michelin_png_ti1aar.png") %>
+  <% end %>
   </div>
-  <%= render 'shared/recap2' %>
+<%= render 'shared/recap2' %>
+<% if current_user.email == "bestdrive@gmail.com" %>
   <div class="choices">
-    <ul class="choices-line-1">
-      <li class="calcul-1"><%= input1 %></li>
-      <li class="calcul-2"><%= input2 %></li>
-      <li class="calcul-3"><%= input3 %></li>
-      <li class="calcul-4"><%= input4 %></li>
-      <li class="calcul-5"><%= input5 %></li>
-      <li class="calcul-6"><%= input6 %></li>
-      <li class="calcul-7"><%= input7 %></li>
-      <li class="calcul-8"><%= input8 %></li>
-    </ul>
-    <ul class="choices-line-2">
-      <li class="calcul-9"><%= input9 %></li>
-      <li class="calcul-10"><%= input10 %></li>
-      <li class="calcul-11"><%= input11 %></li>
-      <li class="calcul-12"><%= input12 %></li>
-      <li class="calcul-13"><%= input13 %></li>
-      <li class="calcul-14"><%= input14 %></li>
-      <li class="calcul-15"><%= input15 %></li>
-      <li class="calcul-16"><%= input16 %></li>
-    </ul>
-  </div>
-
+<% elsif current_user.email == "michelin@gmail.com" %>
+  <div class="choices2">
+<% end %>
+  <ul class="choices-line-1">
+    <li class="calcul-1"><%= input1 %></li>
+    <li class="calcul-2"><%= input2 %></li>
+    <li class="calcul-3"><%= input3 %></li>
+    <li class="calcul-4"><%= input4 %></li>
+    <li class="calcul-5"><%= input5 %></li>
+    <li class="calcul-6"><%= input6 %></li>
+    <li class="calcul-7"><%= input7 %></li>
+    <li class="calcul-8"><%= input8 %></li>
+  </ul>
+  <ul class="choices-line-2">
+    <li class="calcul-9"><%= input9 %></li>
+    <li class="calcul-10"><%= input10 %></li>
+    <li class="calcul-11"><%= input11 %></li>
+    <li class="calcul-12"><%= input12 %></li>
+    <li class="calcul-13"><%= input13 %></li>
+    <li class="calcul-14"><%= input14 %></li>
+    <li class="calcul-15"><%= input15 %></li>
+    <li class="calcul-16"><%= input16 %></li>
+  </ul>
+</div>
 
 </div>
    <div class="draw">
     <div class="draw-1">
-      <div class="close"><i class="far fa-times-circle"></i></div>
+      <%= render 'shared/close' %>
       <div class="draw-details">
         <%= render 'shared/print' %>
         <%= input1 %>
       </div>
       <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602844600/Montage62_jfl2be.png") %>
       <%= render 'shared/recap2' %>
-
     </div>
     <div class="draw-2">
-      <div class="close"><i class="far fa-times-circle"></i></div>
+      <%= render 'shared/close' %>
       <div class="draw-details">
         <%= render 'shared/print' %>
         <%= input2 %>
@@ -75,7 +72,7 @@
       <%= render 'shared/recap2' %>
     </div>
     <div class="draw-3">
-      <div class="close"><i class="far fa-times-circle"></i></div>
+      <%= render 'shared/close' %>
       <div class="draw-details">
         <%= render 'shared/print' %>
         <%= input3 %>
@@ -84,7 +81,7 @@
       <%= render 'shared/recap2' %>
     </div>
     <div class="draw-4">
-      <div class="close"><i class="far fa-times-circle"></i></div>
+      <%= render 'shared/close' %>
       <div class="draw-details">
         <%= render 'shared/print' %>
         <%= input4 %>
@@ -93,7 +90,7 @@
       <%= render 'shared/recap2' %>
     </div>
     <div class="draw-5">
-      <div class="close"><i class="far fa-times-circle"></i></div>
+      <%= render 'shared/close' %>
       <div class="draw-details">
         <%= render 'shared/print' %>
         <%= input5 %>
@@ -102,7 +99,7 @@
       <%= render 'shared/recap2' %>
     </div>
     <div class="draw-6">
-      <div class="close"><i class="far fa-times-circle"></i></div>
+      <%= render 'shared/close' %>
       <div class="draw-details">
         <%= render 'shared/print' %>
         <%= input6 %>
@@ -111,7 +108,7 @@
       <%= render 'shared/recap2' %>
     </div>
     <div class="draw-7">
-      <div class="close"><i class="far fa-times-circle"></i></div>
+      <%= render 'shared/close' %>
       <div class="draw-details">
         <%= render 'shared/print' %>
         <%= input7 %>
@@ -120,7 +117,7 @@
       <%= render 'shared/recap2' %>
     </div>
     <div class="draw-8">
-      <div class="close"><i class="far fa-times-circle"></i></div>
+      <%= render 'shared/close' %>
       <div class="draw-details">
         <%= render 'shared/print' %>
         <%= input8 %>
@@ -129,19 +126,17 @@
       <%= render 'shared/recap2' %>
     </div>
     <div class="draw-9">
-      <div class="close"><i class="far fa-times-circle"></i></div>
+      <%= render 'shared/close' %>
       <div class="draw-details">
         <%= render 'shared/print' %>
         <%= input9 %>
       </div>
 
-
-
       <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602853632/Montage22_vgajnj.png") %>
       <%= render 'shared/recap2' %>
     </div>
     <div class="draw-10">
-      <div class="close"><i class="far fa-times-circle"></i></div>
+      <%= render 'shared/close' %>
       <div class="draw-details">
         <%= render 'shared/print' %>
         <%= input10 %>
@@ -150,7 +145,7 @@
       <%= render 'shared/recap2' %>
     </div>
     <div class="draw-11">
-      <div class="close"><i class="far fa-times-circle"></i></div>
+      <%= render 'shared/close' %>
       <div class="draw-details">
         <%= render 'shared/print' %>
         <%= input11 %>
@@ -159,7 +154,7 @@
       <%= render 'shared/recap2' %>
     </div>
     <div class="draw-12">
-      <div class="close"><i class="far fa-times-circle"></i></div>
+      <%= render 'shared/close' %>
       <div class="draw-details">
         <%= render 'shared/print' %>
         <%= input12 %>
@@ -168,7 +163,7 @@
       <%= render 'shared/recap2' %>
     </div>
     <div class="draw-13">
-      <div class="close"><i class="far fa-times-circle"></i></div>
+      <%= render 'shared/close' %>
       <div class="draw-details">
         <%= render 'shared/print' %>
         <%= input13 %>
@@ -177,7 +172,7 @@
       <%= render 'shared/recap2' %>
     </div>
     <div class="draw-14">
-      <div class="close"><i class="far fa-times-circle"></i></div>
+      <%= render 'shared/close' %>
       <div class="draw-details">
         <%= render 'shared/print' %>
         <%= input14 %>
@@ -186,7 +181,7 @@
       <%= render 'shared/recap2' %>
     </div>
     <div class="draw-15">
-      <div class="close"><i class="far fa-times-circle"></i></div>
+      <%= render 'shared/close' %>
       <div class="draw-details">
         <%= render 'shared/print' %>
         <%= input15 %>
@@ -195,7 +190,7 @@
       <%= render 'shared/recap2' %>
     </div>
     <div class="draw-16">
-      <div class="close"><i class="far fa-times-circle"></i></div>
+      <%= render 'shared/close' %>
       <div class="draw-details">
         <%= render 'shared/print' %>
         <%= input16 %>
