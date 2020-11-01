@@ -1,44 +1,32 @@
-  <% input1 = (@standard.fam + ((@standard.janteexterieur)*2)-((@standard.voilecreux )*2)- ((@standard.jantelargeur) * 25.4)).round(-1)%>
-  <% input2 = (@standard.fam + ((@standard.voileepaisseur)*2)+((@standard.jantesepaisseur )*2)+((@standard.janteexterieur)*2)-((@standard.voilecreux)*2)-((@standard.jantelargeur) * 25.4)).round(-1)%>
-  <% input3 = (@standard.fam + ((@standard.jantelargeur)* 25.4)-((@standard.voilecreux )*2)-((@standard.janteexterieur)*2)-((@standard.jantesepaisseur)*2)).round(-1)%>
-  <% input4 = (@standard.fam + ((@standard.voileepaisseur)*2)+((@standard.jantelargeur)* 25.4)-((@standard.voilecreux )*2)-((@standard.janteexterieur)*2)).round(-1)%>
-  <% input5 = (@standard.fam + ((@standard.voilecreux )*2)+((@standard.janteexterieur)*2)-((@standard.jantelargeur) * 25.4)).round(-1)%>
-  <% input6 = (@standard.fam + ((@standard.voilecreux )*2)+((@standard.voileepaisseur)*2)+((@standard.jantesepaisseur )*2)+((@standard.janteexterieur)*2)-((@standard.jantelargeur) * 25.4)).round(-1)%>
-  <% input7 = (@standard.fam + ((@standard.voilecreux )*2)+((@standard.jantelargeur) * 25.4)-((@standard.janteexterieur)*2)-((@standard.jantesepaisseur)*2)).round(-1)%>
-  <% input8 = (@standard.fam + ((@standard.voilecreux )*2)+((@standard.jantesepaisseur)*2)+((@standard.jantelargeur) * 25.4)-((@standard.janteexterieur)*2)).round(-1)%>
-  <div class="container container-mobile">
-   <div class="logo-fat">
-    <% if current_user.email == "bestdrive@gmail.com" %>
-      <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602678647/logoopacity_grmfql.png") %>
-    <% elsif current_user.email == "michelin@gmail.com" %>
-      <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1604178048/michelin_png_ti1aar.png") %>
-    <% end %>
-    </div>
-<!--     <div class="back">
-    </div> -->
-
-
-    <%= render 'shared/recap' %>
+<div class="container container-mobile">
+ <div class="logo-fat">
   <% if current_user.email == "bestdrive@gmail.com" %>
-    <div class="choices">
+    <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602678647/logoopacity_grmfql.png") %>
   <% elsif current_user.email == "michelin@gmail.com" %>
-    <div class="choices2">
+    <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1604178048/michelin_png_ti1aar.png") %>
   <% end %>
-      <ul class="choices-line-1">
-        <li class="calcul-1"><%= input1 %></li>
-        <li class="calcul-2"><%= input2 %></li>
-        <li class="calcul-3"><%= input3 %></li>
-        <li class="calcul-4"><%= input4 %></li>
-      </ul>
+</div>
 
-      <ul class="choices-line-2">
-        <li class="calcul-5"><%= input5 %></li>
-        <li class="calcul-6"><%= input6 %></li>
-        <li class="calcul-7"><%= input7 %></li>
-        <li class="calcul-8"><%= input8 %></li>
-      </ul>
-    </div>
+<%= render 'shared/recap' %>
+<% if current_user.email == "bestdrive@gmail.com" %>
+  <div class="choices">
+<% elsif current_user.email == "michelin@gmail.com" %>
+  <div class="choices2">
+<% end %>
+  <ul class="choices-line-1">
+    <li class="calcul-1"><%= @sortinputstandard [0]%></li>
+    <li class="calcul-2"><%= @sortinputstandard [1] %></li>
+    <li class="calcul-3"><%= @sortinputstandard [2] %></li>
+    <li class="calcul-4"><%= @sortinputstandard [3] %></li>
+  </ul>
 
+  <ul class="choices-line-2">
+    <li class="calcul-5"><%= @sortinputstandard [4] %></li>
+    <li class="calcul-6"><%= @sortinputstandard [5] %></li>
+    <li class="calcul-7"><%= @sortinputstandard [6] %></li>
+    <li class="calcul-8"><%= @sortinputstandard [7] %></li>
+  </ul>
+  </div>
 
 </div>
    <div class="draw">
@@ -46,7 +34,7 @@
       <%= render 'shared/close' %>
       <%= render 'shared/print' %>
       <div class="draw-details">
-        <%= input1 %>
+        <%= @sortinputstandard [0]%>
       </div>
       <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602765699/1_ttvkjh.png") %>
       <%= render 'shared/recap' %>
@@ -55,7 +43,7 @@
       <%= render 'shared/close' %>
       <%= render 'shared/print' %>
       <div class="draw-details">
-        <%= input2 %>
+        <%= @sortinputstandard [1]%>
       </div>
       <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602769012/2_dqnche.png") %>
       <%= render 'shared/recap' %>
@@ -64,7 +52,7 @@
       <%= render 'shared/close' %>
       <%= render 'shared/print' %>
       <div class="draw-details">
-        <%= input3 %>
+        <%= @sortinputstandard [2]%>
       </div>
       <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602769078/3_vruygm.png") %>
       <%= render 'shared/recap' %>
@@ -73,7 +61,7 @@
       <%= render 'shared/close' %>
       <%= render 'shared/print' %>
       <div class="draw-details">
-        <%= input4 %>
+        <%= @sortinputstandard [3]%>
       </div>
       <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602769132/4_vpmbfq.png") %>
       <%= render 'shared/recap' %>
@@ -82,7 +70,7 @@
       <%= render 'shared/close' %>
       <%= render 'shared/print' %>
       <div class="draw-details">
-        <%= input5 %>
+        <%= @sortinputstandard [4]%>
       </div>
       <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602769242/5_npo5dv.png") %>
       <%= render 'shared/recap' %>
@@ -91,7 +79,7 @@
       <%= render 'shared/close' %>
       <%= render 'shared/print' %>
       <div class="draw-details">
-        <%= input6 %>
+        <%= @sortinputstandard [5]%>
       </div>
       <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602769281/6_chrmsm.png") %>
       <%= render 'shared/recap' %>
@@ -100,7 +88,7 @@
       <%= render 'shared/close' %>
       <%= render 'shared/print' %>
       <div class="draw-details">
-        <%= input7 %>
+        <%= @sortinputstandard [6]%>
       </div>
       <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602769308/7_ahip0o.png") %>
       <%= render 'shared/recap' %>
@@ -109,7 +97,7 @@
       <%= render 'shared/close' %>
       <%= render 'shared/print' %>
       <div class="draw-details">
-        <%= input8 %>
+        <%= @sortinputstandard [7]%>
       </div>
       <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602769341/8_eomt88.png") %>
       <%= render 'shared/recap' %>

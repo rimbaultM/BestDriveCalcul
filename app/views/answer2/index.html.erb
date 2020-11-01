@@ -1,20 +1,3 @@
-<% input1 = (@etroite.fam + ((@etroite.janteexterieur )*2)-((@etroite.voilecreux )*2)-((@etroite.jantelargeur) * 25.4)-((@etroite.voileepaisseur)*2)).round(-1)%>
-<% input2 = (@etroite.fam + ((@etroite.jantesepaisseur )*2)+((@etroite.janteexterieur)*2)-((@etroite.voilecreux )*2)-((@etroite.jantelargeur) * 25.4)).round(-1)%>
-<% input3 = (@etroite.fam + ((@etroite.janteexterieur )*2)+((@etroite.cic)*2)-((@etroite.voilecreux )*2)-((@etroite.jantelargeur) * 25.4)).round(-1)%>
-<% input4 = (@etroite.fam + ((@etroite.voileepaisseur )*2)+((@etroite.jantesepaisseur)*2)+((@etroite.janteexterieur)*2)+((@etroite.cic)*2)-((@etroite.voilecreux )*2)-((@etroite.jantelargeur) * 25.4)).round(-1)%>
-<% input5 = (@etroite.fam + ((@etroite.jantelargeur) * 25.4)-((@etroite.voilecreux )*2)-((@etroite.janteexterieur)*2)-((@etroite.jantesepaisseur )*2)-((@etroite.voileepaisseur)*2)).round(-1)%>
-<% input6 = (@etroite.fam + @etroite.cic+((@etroite.jantelargeur) * 25.4)-((@etroite.voilecreux )*2)-((@etroite.janteexterieur)*2)-((@etroite.jantesepaisseur)*2)).round(-1)%>
-<% input7 = (@etroite.fam + ((@etroite.jantelargeur) * 25.4)-((@etroite.voilecreux )*2)-((@etroite.janteexterieur )*2)).round(-1)%>
-<% input8 = (@etroite.fam + ((@etroite.voileepaisseur )*2)+((@etroite.cic)*2)+((@etroite.jantelargeur) * 25.4)-((@etroite.voilecreux )*2)-((@etroite.janteexterieur )*2)).round(-1)%>
-<% input9 = (@etroite.fam + ((@etroite.voilecreux )*2)+((@etroite.janteexterieur)*2)-((@etroite.jantelargeur) * 25.4)-((@etroite.voileepaisseur)*2)).round(-1)%>
-<% input10 = (@etroite.fam + ((@etroite.voilecreux )*2)+((@etroite.janteexterieur)*2)+((@etroite.cic)*2)-((@etroite.jantelargeur) * 25.4)).round(-1)%>
-<% input11 = (@etroite.fam + ((@etroite.voilecreux )*2)+((@etroite.jantesepaisseur )*2)+((@etroite.janteexterieur)*2)-((@etroite.jantelargeur)* 25.4)).round(-1)%>
-<% input12 = (@etroite.fam + ((@etroite.voilecreux )*2)+((@etroite.voileepaisseur)*2)+((@etroite.jantesepaisseur )*2)+((@etroite.janteexterieur)*2)+((@etroite.cic)*2)-((@etroite.jantelargeur)* 25.4)).round(-1)%>
-<% input13 = (@etroite.fam + ((@etroite.voilecreux )*2)+((@etroite.jantelargeur) * 25.4)-((@etroite.janteexterieur)*2)-((@etroite.jantesepaisseur )*2)-((@etroite.voileepaisseur)*2)).round(-1)%>
-<% input14 = (@etroite.fam + ((@etroite.voilecreux )*2)+((@etroite.cic)*2)+((@etroite.jantelargeur) * 25.4)-((@etroite.janteexterieur)*2)-((@etroite.jantesepaisseur )*2)).round(-1)%>
-<% input15 = (@etroite.fam + ((@etroite.voilecreux )*2)+((@etroite.jantelargeur) * 25.4)-((@etroite.janteexterieur)*2)).round(-1)%>
-<% input16 = (@etroite.fam + ((@etroite.voilecreux )*2)+((@etroite.voileepaisseur)*2)+((@etroite.cic)*2)+((@etroite.jantelargeur) * 25.4)-((@etroite.janteexterieur)*2)).round(-1)%>
-
 <div class="container container-mobile">
  <div class="logo-fat">
   <% if current_user.email == "bestdrive@gmail.com" %>
@@ -30,24 +13,24 @@
   <div class="choices2">
 <% end %>
   <ul class="choices-line-1">
-    <li class="calcul-1"><%= input1 %></li>
-    <li class="calcul-2"><%= input2 %></li>
-    <li class="calcul-3"><%= input3 %></li>
-    <li class="calcul-4"><%= input4 %></li>
-    <li class="calcul-5"><%= input5 %></li>
-    <li class="calcul-6"><%= input6 %></li>
-    <li class="calcul-7"><%= input7 %></li>
-    <li class="calcul-8"><%= input8 %></li>
+    <li class="calcul-1"><%= @sortinputetroit[0] %></li>
+    <li class="calcul-2"><%= @sortinputetroit[1] %></li>
+    <li class="calcul-3"><%= @sortinputetroit[2] %></li>
+    <li class="calcul-4"><%= @sortinputetroit[3] %></li>
+    <li class="calcul-5"><%= @sortinputetroit[4] %></li>
+    <li class="calcul-6"><%= @sortinputetroit[5] %></li>
+    <li class="calcul-7"><%= @sortinputetroit[6] %></li>
+    <li class="calcul-8"><%= @sortinputetroit[7] %></li>
   </ul>
   <ul class="choices-line-2">
-    <li class="calcul-9"><%= input9 %></li>
-    <li class="calcul-10"><%= input10 %></li>
-    <li class="calcul-11"><%= input11 %></li>
-    <li class="calcul-12"><%= input12 %></li>
-    <li class="calcul-13"><%= input13 %></li>
-    <li class="calcul-14"><%= input14 %></li>
-    <li class="calcul-15"><%= input15 %></li>
-    <li class="calcul-16"><%= input16 %></li>
+    <li class="calcul-9"><%= @sortinputetroit[8] %></li>
+    <li class="calcul-10"><%= @sortinputetroit[9] %></li>
+    <li class="calcul-11"><%= @sortinputetroit[10] %></li>
+    <li class="calcul-12"><%= @sortinputetroit[11] %></li>
+    <li class="calcul-13"><%= @sortinputetroit[12] %></li>
+    <li class="calcul-14"><%= @sortinputetroit[13] %></li>
+    <li class="calcul-15"><%= @sortinputetroit[14] %></li>
+    <li class="calcul-16"><%= @sortinputetroit[15] %></li>
   </ul>
 </div>
 
@@ -57,7 +40,7 @@
       <%= render 'shared/close' %>
       <div class="draw-details">
         <%= render 'shared/print' %>
-        <%= input1 %>
+        <%= @sortinputetroit[0] %>
       </div>
       <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602844600/Montage62_jfl2be.png") %>
       <%= render 'shared/recap2' %>
@@ -66,7 +49,7 @@
       <%= render 'shared/close' %>
       <div class="draw-details">
         <%= render 'shared/print' %>
-        <%= input2 %>
+        <%= @sortinputetroit[1] %>
       </div>
       <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602844642/Montage61_xzj31e.png") %>
       <%= render 'shared/recap2' %>
@@ -75,7 +58,7 @@
       <%= render 'shared/close' %>
       <div class="draw-details">
         <%= render 'shared/print' %>
-        <%= input3 %>
+        <%= @sortinputetroit[2] %>
       </div>
       <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602844690/Montage52_ri25od.png") %>
       <%= render 'shared/recap2' %>
@@ -84,7 +67,7 @@
       <%= render 'shared/close' %>
       <div class="draw-details">
         <%= render 'shared/print' %>
-        <%= input4 %>
+        <%= @sortinputetroit[3] %>
       </div>
       <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602844724/Montage51_prrc6h.png") %>
       <%= render 'shared/recap2' %>
@@ -93,7 +76,7 @@
       <%= render 'shared/close' %>
       <div class="draw-details">
         <%= render 'shared/print' %>
-        <%= input5 %>
+        <%= @sortinputetroit[4] %>
       </div>
       <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602844772/Montage82_tzfom3.png") %>
       <%= render 'shared/recap2' %>
@@ -102,7 +85,7 @@
       <%= render 'shared/close' %>
       <div class="draw-details">
         <%= render 'shared/print' %>
-        <%= input6 %>
+        <%= @sortinputetroit[5] %>
       </div>
       <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602844788/Montage81_tlcg4o.png") %>
       <%= render 'shared/recap2' %>
@@ -111,7 +94,7 @@
       <%= render 'shared/close' %>
       <div class="draw-details">
         <%= render 'shared/print' %>
-        <%= input7 %>
+        <%= @sortinputetroit[6] %>
       </div>
       <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602844823/Montage72_deqqlk.png") %>
       <%= render 'shared/recap2' %>
@@ -120,7 +103,7 @@
       <%= render 'shared/close' %>
       <div class="draw-details">
         <%= render 'shared/print' %>
-        <%= input8 %>
+        <%= @sortinputetroit[7] %>
       </div>
       <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602844834/Montage71_isb3wr.png") %>
       <%= render 'shared/recap2' %>
@@ -129,9 +112,8 @@
       <%= render 'shared/close' %>
       <div class="draw-details">
         <%= render 'shared/print' %>
-        <%= input9 %>
+        <%= @sortinputetroit[8]%>
       </div>
-
       <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602853632/Montage22_vgajnj.png") %>
       <%= render 'shared/recap2' %>
     </div>
@@ -139,7 +121,7 @@
       <%= render 'shared/close' %>
       <div class="draw-details">
         <%= render 'shared/print' %>
-        <%= input10 %>
+        <%= @sortinputetroit[9] %>
       </div>
       <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602853666/Montage21_uq3ejo.png") %>
       <%= render 'shared/recap2' %>
@@ -148,7 +130,7 @@
       <%= render 'shared/close' %>
       <div class="draw-details">
         <%= render 'shared/print' %>
-        <%= input11 %>
+        <%= @sortinputetroit[10] %>
       </div>
       <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602853713/Montage12_wz0jlo.png") %>
       <%= render 'shared/recap2' %>
@@ -157,7 +139,7 @@
       <%= render 'shared/close' %>
       <div class="draw-details">
         <%= render 'shared/print' %>
-        <%= input12 %>
+        <%= @sortinputetroit[11] %>
       </div>
       <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602853736/Montage11_hhmp06.png") %>
       <%= render 'shared/recap2' %>
@@ -166,7 +148,7 @@
       <%= render 'shared/close' %>
       <div class="draw-details">
         <%= render 'shared/print' %>
-        <%= input13 %>
+        <%= @sortinputetroit[12]%>
       </div>
       <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602853839/Montage42_des9gz.png") %>
       <%= render 'shared/recap2' %>
@@ -175,7 +157,7 @@
       <%= render 'shared/close' %>
       <div class="draw-details">
         <%= render 'shared/print' %>
-        <%= input14 %>
+        <%= @sortinputetroit[13]%>
       </div>
       <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602853857/Montage41_b6paww.png") %>
       <%= render 'shared/recap2' %>
@@ -184,7 +166,7 @@
       <%= render 'shared/close' %>
       <div class="draw-details">
         <%= render 'shared/print' %>
-        <%= input15 %>
+        <%= @sortinputetroit[14] %>
       </div>
       <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602853896/Montage32_xy1g1q.png") %>
       <%= render 'shared/recap2' %>
@@ -193,7 +175,7 @@
       <%= render 'shared/close' %>
       <div class="draw-details">
         <%= render 'shared/print' %>
-        <%= input16 %>
+        <%= @sortinputetroit[15] %>
       </div>
       <%= image_tag("https://res.cloudinary.com/dc9pm7uj8/image/upload/v1602853928/Montage31_d3dgxl.png") %>
       <%= render 'shared/recap2' %>
